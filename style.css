@@ -46,6 +46,8 @@
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 @media (max-width: 768px) {
     .content-container {
@@ -53,14 +55,13 @@
         padding: 10px;
     }
 }
-.your-city-wheather {
-    margin: 6px;
+.your-city-weather {
+    margin: 2px;
     width: 800px;
     height: 51%;
     border: 1px solid black;
     background-color: rgba(173, 216, 230, 0.5);
     padding: 10px;
-    margin: 10px;
 }
 
 .hourly-forecast {
@@ -69,17 +70,19 @@
     border: 1px solid black;
     background-color: rgba(173, 216, 230, 0.5);
     padding: 10px;
+    flex-basis: 100%;
 }
 .forecast-3{
-    height: 55%;
     width:510px;
     display: flex;
     flex-wrap: wrap;
     gap:10px;
-
+    margin: 1px;
+    align-content:baseline;
 }
 
 .today{
+    flex-grow:1;
     height: 180px;
     width:47%;
     border: 1px solid green;
@@ -88,6 +91,7 @@
 }
 
 .tomorrow {
+    flex-grow:1;
     height: 180px;
     width:48%;
     border: 1px solid green;
@@ -99,7 +103,6 @@
     border: 1px solid blue;
     background-color: rgba(135, 206, 250, 0.5);
       padding: 10px;
-    margin: 10px;
 }
 
 .past-forecast {
@@ -107,11 +110,12 @@
     background-color: rgba(255, 182, 193, 0.5);
     width: 100%;
     height: 90px;
+    flex-basis: 100%;
 }
 
 .find-your-city {
     border: 1px solid orange;
     background-color: rgba(255, 165, 0, 0.5); 
     padding: 10px;
-    margin: 10px;
+    margin: 1px;
 }
