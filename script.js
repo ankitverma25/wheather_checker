@@ -62,7 +62,6 @@ function displayWeatherData(data) {
   const humidity = data.main.humidity;
   const windSpeed = data.wind.speed;
   const description = data.weather[0].description;
-  const icon = data.weather[0].icon;
   const sunrise = new Date(data.sys.sunrise * 1000).toLocaleTimeString();
   const sunset = new Date(data.sys.sunset * 1000).toLocaleTimeString();
 
@@ -75,6 +74,5 @@ function displayWeatherData(data) {
     <p><strong>Wind Speed:</strong> ${windSpeed} m/s</p>
     <p><strong>Sunrise:</strong> ${sunrise}</p>
     <p><strong>Sunset:</strong> ${sunset}</p>
-    <img src="http://openweathermap.org/img/wn/${icon}.png" alt="Weather Icon">
   `;
 }
