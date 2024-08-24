@@ -58,7 +58,7 @@
 .your-city-weather {
     margin: 2px;
     width: 800px;
-    height: 53%;
+    height: 54%;
     border: 1px solid black;
     background-color: rgba(173, 216, 230, 0.5);
     padding: 10px;
@@ -83,7 +83,7 @@
 
 .today{
     flex-grow:1;
-    height: 180px;
+    height: 170px;
     width:47%;
     border: 1px solid green;
     background-color: rgba(144, 238, 144, 0.5);  
@@ -92,7 +92,7 @@
 
 .tomorrow {
     flex-grow:1;
-    height: 180px;
+    height: 170px;
     width:48%;
     border: 1px solid green;
     background-color: rgba(144, 238, 144, 0.5);  
