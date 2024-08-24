@@ -51,4 +51,3 @@ function searchweather() {
 
 const container = document.createElement('div');
 container.textContent = "Weather Data Container";
-document.body.appendChild(container);

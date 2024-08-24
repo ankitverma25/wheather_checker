@@ -1,14 +1,117 @@
-.container{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
     position: relative;
+    width: 99vw;
     height: 100vh;
-    width: 100vw;
+    overflow: hidden;
+}
+
+.bg-video-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 99vw;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    overflow: hidden;
+}
+
+.backround-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
 }
 
 
-.bg-video-container{
-    transform: translate(50%,50%);
-    position: absolute;
-    object-fit: cover;
-    width: 100vw;
-    height: 100vh;
+.content-container {
+    height: 100%;
+    position: relative;
+    background-color: rgba(240, 248, 255, 0.312);
+    z-index: 1;
+    text-align: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+    .content-container {
+        overflow-y: auto;
+        padding: 10px;
+    }
+}
+.your-city-wheather {
+    margin: 6px;
+    width: 800px;
+    height: 51%;
+    border: 1px solid black;
+    background-color: rgba(173, 216, 230, 0.5);
+    padding: 10px;
+    margin: 10px;
+}
+
+.hourly-forecast {
+    width: 99%;
+    height: 80px;
+    border: 1px solid black;
+    background-color: rgba(173, 216, 230, 0.5);
+    padding: 10px;
+}
+.forecast-3{
+    height: 55%;
+    width:510px;
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
+
+}
+
+.today{
+    height: 180px;
+    width:47%;
+    border: 1px solid green;
+    background-color: rgba(144, 238, 144, 0.5);  
+    padding: 10px;
+}
+
+.tomorrow {
+    height: 180px;
+    width:48%;
+    border: 1px solid green;
+    background-color: rgba(144, 238, 144, 0.5);  
+    padding: 10px;
+}
+
+.forecast {
+    border: 1px solid blue;
+    background-color: rgba(135, 206, 250, 0.5);
+      padding: 10px;
+    margin: 10px;
+}
+
+.past-forecast {
+    border: 1px solid red;
+    background-color: rgba(255, 182, 193, 0.5); /* Light pink with 50% opacity */
+    width: 100%;
+    height: 90px;
+}
+
+.find-your-city {
+    border: 1px solid orange;
+    background-color: rgba(255, 165, 0, 0.5); /* Orange with 50% opacity */
+    padding: 10px;
+    margin: 10px;
 }

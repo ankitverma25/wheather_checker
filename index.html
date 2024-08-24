@@ -1,20 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
         <div class="bg-video-container">
             <video class="backround-video" src="rainy.mp4" autoplay muted loop>video is not supporting</video>
         </div>
 
-
         <div class="content-container">
-            <div class="your-city-wheather"> <h1>CITY NAME</h1></div>
+            <div class="your-city-wheather">
+                <h1>CITY NAME</h1>
+            </div>
+            <div class="forecast-3">
+                <div class="hourly-forecast">hourly-forecast</div>
+                <div class="tomorrow">tomorrow</div>
+                <div class="today">today forecast</div>    
+                <div class="past-forecast">PAST forecast</div>
+            </div>
+            <div class="find-your-city"> <label for="city">enter the city</label>
+                <input type="search" name="city" id="city" placeholder="enter the city"><button
+                    class="search">search</button>
+            </div>
+            <div class="forecast">forecast</div>
+
+
 
 
 
@@ -23,10 +39,10 @@
 
     </div>
 
-    
 
-    <label for="city">enter the city</label>
-    <input type="search" name="city" id="city" placeholder="enter the city"><button class="search">search</button>
+
     <script src="script.js"></script>
+
 </body>
+
 </html>
