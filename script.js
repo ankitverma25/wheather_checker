@@ -14,6 +14,7 @@ function success(pos) {
   )
     .then((response) => response.json())
     .then((data) => {
+      displayWeatherData(data);
       console.log("Weather data for current location:", data);
     })
     .catch((error) => {
@@ -49,5 +50,22 @@ function searchweather() {
   }
 }
 
-const container = document.createElement('div');
-container.textContent = "Weather Data Container";
+
+const weatherContainer = document.querySelector('.your-city-weather');
+
+function displayWeatherData(data) {
+  const city = data.name;
+  const temp_min = data.main.temp_min;
+  const temp_max = data.main.temp_max;
+  const sunrise = new Date(data.sys.sunrise * 1000).toLocaleTimeString();
+  const sunset = new Date(data.sys.sunset * 1000).toLocaleTimeString();
+
+
+  weatherContainer.innerHTML = `
+    <h2>City: ${city}</h2>
+    <p>Min Temp: ${temp_min}°C</p>
+    <p>Max Temp: ${temp_max}°C</p>
+    <p>Sunrise: ${sunrise}</p>
+    <p>Sunset: ${sunset}</p>
+  `;
+}

@@ -46,7 +46,7 @@
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 @media (max-width: 768px) {
@@ -58,7 +58,7 @@
 .your-city-weather {
     margin: 2px;
     width: 800px;
-    height: 51%;
+    height: 53%;
     border: 1px solid black;
     background-color: rgba(173, 216, 230, 0.5);
     padding: 10px;
