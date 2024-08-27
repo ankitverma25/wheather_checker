@@ -66,7 +66,7 @@ function displayWeatherData(data) {
   const sunset = new Date(data.sys.sunset * 1000).toLocaleTimeString();
 
   weatherContainer.innerHTML = `
-    <h2>Weather in ${city}</h2>
+    <h1>Weather in ${city}</h1>
     <p><strong>Temperature:</strong> ${temp}°C (Min: ${tempMin}°C, Max: ${tempMax}°C)</p>
     <p><strong>Feels Like:</strong> ${feelsLike}°C</p>
     <p><strong>Weather:</strong> ${description}</p>
