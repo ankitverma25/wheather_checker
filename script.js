@@ -41,6 +41,7 @@ function searchweather() {
       .then((response) => response.json())
       .then((data) => {
         console.log("Weather data for city:", data);
+        displayseacrhcityData(data)
       })
       .catch((error) => {
         console.log("Error fetching weather data for city:", error);
@@ -67,7 +68,33 @@ function displayWeatherData(data) {
 
   weatherContainer.innerHTML = `
     <h1>Weather in ${city}</h1>
-    <p><strong>Temperature:</strong> ${temp}°C (Min: ${tempMin}°C, Max: ${tempMax}°C)</p>
+    <p><strong>Temperature:</strong> ${temp}°C (Min: ${tempMin}°C,<br> Max: ${tempMax}°C)</p>
+    <p><strong>Feels Like:</strong> ${feelsLike}°C</p>
+    <p><strong>Weather:</strong> ${description}</p>
+    <p><strong>Humidity:</strong> ${humidity}%</p>
+    <p><strong>Wind Speed:</strong> ${windSpeed} m/s</p>
+    <p><strong>Sunrise:</strong> ${sunrise}</p>
+    <p><strong>Sunset:</strong> ${sunset}</p>
+  `;
+}
+
+const city_box=document.querySelector('.find_your_search_data')
+
+function displayseacrhcityData(data) {
+  const city = data.name;
+  const temp = data.main.temp;
+  const tempMin = data.main.temp_min;
+  const tempMax = data.main.temp_max;
+  const feelsLike = data.main.feels_like;
+  const humidity = data.main.humidity;
+  const windSpeed = data.wind.speed;
+  const description = data.weather[0].description;
+  const sunrise = new Date(data.sys.sunrise * 1000).toLocaleTimeString();
+  const sunset = new Date(data.sys.sunset * 1000).toLocaleTimeString();
+
+  city_box.innerHTML = `
+    <h1>Weather in ${city}</h1>
+    <p><strong>Temperature:</strong> ${temp}°C (Min: ${tempMin}°C,<br> Max: ${tempMax}°C)</p>
     <p><strong>Feels Like:</strong> ${feelsLike}°C</p>
     <p><strong>Weather:</strong> ${description}</p>
     <p><strong>Humidity:</strong> ${humidity}%</p>
